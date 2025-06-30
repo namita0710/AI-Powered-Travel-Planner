@@ -5,7 +5,7 @@ import pandas as pd
 import tempfile
 
 # Configure Gemini API Key
-genai.configure(api_key="AIzaSyCO4qG0DWAHbetiiJRy0YoFgVcqfMX9L8U")
+genai.configure(api_key="Your API Key")
 
 # Function to generate itinerary
 def generate_itinerary(destination, days, interests, budget, theme):
