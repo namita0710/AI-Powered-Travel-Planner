@@ -5,7 +5,8 @@ import pandas as pd
 import tempfile
 
 # Configure Gemini API Key
-genai.configure(api_key="Your API Key")
+# genai.configure(api_key="AIzaSyCO4qG0DWAHbetiiJRy0YoFgVcqfMX9L8U")
+genai.configure(api_key="AIzaSyAA_3wyvBApPc5o8xTfIg3q2U2WGoIclp0")
 
 # Function to generate itinerary
 def generate_itinerary(destination, days, interests, budget, theme):
@@ -52,8 +53,15 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 # Streamlit UI
-st.title("🧳 AI Travel Itinerary Planner")
-st.write("Plan your dream trip with AI ✨")
+
+# st.set_page_config(page_title="AI Travel Itinerary Planner", layout="centered")
+st.image("./Images/AI-travelPlanner_logo.png", width=300, caption="")
+# st.title("🧳 AI Travel Itinerary Planner")
+st.title("Plan your dream trip with AI ✨")
+
+st.markdown("Generate personalized travel plans using AI by entering your preferences below.")
+
+st.subheader("📍 Trip Details")
 theme = st.selectbox("Select your trip theme", ["Relaxing", "Adventure", "Romantic", "Spiritual"])
 
 # Adjust the prompt accordingly
